@@ -1,0 +1,14 @@
+.content-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.tech-content {
+    display: none;
+}
+
+.tech-content.active {
+    display: block;
+}

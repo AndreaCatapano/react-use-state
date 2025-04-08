@@ -7,8 +7,7 @@ function Buttons({ languages, activeLanguage, setActiveLanguage }) {
                 <button
                     key={language.id}
                     className={`tech-button ${activeLanguage === language.id ? 'active' : null}`}
-                    onClick={() => setActiveLanguage(language.id)}
-                >
+                    onClick={() => setActiveLanguage(language.id)} >
                     {language.title}
                 </button>
             ))}
@@ -17,4 +16,4 @@ function Buttons({ languages, activeLanguage, setActiveLanguage }) {
 }
 
 
-export default Buttons
+export default Buttons;

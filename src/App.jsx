@@ -2,10 +2,13 @@ import { useState } from 'react';
 import './App.css'
 import languages from './Data/languages.js'
 import Buttons from './components /Buttons/Buttons.jsx';
+import Content from './components /Content/Content.jsx';
 
 function App() {
 
   const [activeLanguage, setActiveLanguage] = useState(0)
+  const currentLanguage = languages.find(language => language.id === activeLanguage);
+
 
   return (
     <>
@@ -14,17 +17,8 @@ function App() {
           <h1>Learn Web development</h1>
 
           <Buttons languages={languages} activeLanguage={activeLanguage} setActiveLanguage={setActiveLanguage} />
+          <Content currentLanguage={currentLanguage} />
 
-          <div className="content-container">
-            {languages.map((language) => (
-              <div
-                key={language.id}
-                className={`tech-content ${activeLanguage === language.id ? 'active' : null}`}>
-                <h2>{language.title}</h2>
-                <p>{language.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div >
     </>
